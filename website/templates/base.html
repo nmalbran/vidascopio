@@ -43,6 +43,12 @@ $(document).ready(function()
 document.onclick = jsddm_close;
 </script>
 
+<style type="text/css" media="screen">
+    {% block extrastyle %}
+
+    {% endblock extrastyle %}
+</style>
+
 </head>
 
 
@@ -53,7 +59,8 @@ document.onclick = jsddm_close;
     <div id="container" class="container">
         <div id="header" class="span-20 last">
             {% block header %}
-                <img src="{{STATIC_URL}}img/vidascopio.png" alt="">
+                <img src="{{STATIC_URL}}img/vidascopio_logo.png" alt="logo" height="68px"/>
+                <img src="{{STATIC_URL}}img/vidascopio.png" alt="" style="margin-left:4em">
             {% endblock header %}
 
         </div>
@@ -82,7 +89,7 @@ document.onclick = jsddm_close;
                             </li>
                             <li><a href="#">Compartimos</a>
                                 <ul>
-                                    <li><a href="{% url 'experiencia' %}">Nuestra experiencia</a></li>
+                                    <li><a href="{% url 'experiencia' %}">Experiencias</a></li>
                                     <li><a href="{% url 'links' %}">Links</a></li>
                                 </ul>
                             </li>
@@ -119,4 +126,3 @@ document.onclick = jsddm_close;
 
 </body>
 </html>
-

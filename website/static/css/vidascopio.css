@@ -15,7 +15,7 @@ div#header{
     height: 80px;
     padding-top: 1em;
     margin-bottom: -1em;
-    text-align: center;
+    padding-left: 1em;
 }
 
 #menu{
@@ -77,7 +77,7 @@ div.titulo{
 }
 
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5{
     color: #1B7C52;
 }
 
@@ -112,7 +112,9 @@ h4{
 }
 
 #centro .marco{
-    border: 1px solid #52BF90;
+    /*border: 1px solid #52BF90;*/
+    /*background-color: #DA977C;*/
+    background: transparent url('../img/TexturasVane (152).jpg') no-repeat scroll center center;
     padding: 1.5em;
     margin: 2.5em 0 2em;
 }
@@ -184,3 +186,7 @@ h4{
 
 
 */
+
+.hide{
+    visibility: hidden;
+}

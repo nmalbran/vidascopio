@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block centro %}
+<h2><em>"Escribir como lectores"</em></h2>
+
+<p>Es un Proyecto del <b>Club Telémaco</b> que pretende poner la literatura al alcance de niños y jóvenes con la intención de que constituya un elemento importante en la formación de sus respectivas identidades, proponiendo la organización de distintas prácticas de escritura en torno a la lectura de una obra de autor.</p>
+
+<p>
+    Coordinado por la <b>Asociación Española de Lectura y Escritura (AELE)</b> y con el apoyo de la <b>Universidad
+        Complutense de Madrid</b> y la <b>Fundación SM</b> se desarrolla por quinto año consecutivo en tres paises latinoamericanos, Argentina, Chile y Perú de la
+    mano de instituciones sociales
+    dedicadas a promover la escritura y la lectura en la población infantil y juvenil (<a href="http://www.clubescrituratelemaco.org">www.clubescrituratelemaco.org</a>).
+</p>
+
+<p>
+    En el caso de Chile, <b>ONG Vidascopio</b> ejecutó el proyecto desde el año 2010 en las comunas de La Granga, Maipú y Cerro Navia
+    apoyada por la <b>Corporación Cultural Cluny</b> y el patrocinio del <b>MINEDUC</b>.
+</p>
+
+<br />
+
+<div class="marco">
+    <p class="cita">
+        "Nos  adherimos al valor de la palabra en términos de dignidad humana y al derecho de poseerla en propiedad compartida. A disponer de ella y a recrearla desde la propia identidad en cada momento de la vida."
+    </p>
+    <p class="autor"><span style="font-family:serif;font-size:0.8em">AELE</span></p>
+</div>
+{% endblock centro %}
+
+{% block derecha %}
+    <img src="{{ STATIC_URL }}img/aele.png" alt="" width="100px">
+<img src="{{ STATIC_URL }}img/fundacion-sm.png" alt="" width="100px">
+<img src="{{ STATIC_URL }}img/u-madrid.png" alt="" width="100px">
+<img src="{{ STATIC_URL }}img/gobierno-de-la-rioja.png" alt="" width="100px">
+<img src="{{ STATIC_URL }}img/cluny.jpg" alt="" width="100px">
+<img src="{{ STATIC_URL }}img/vidascopio_logo.png" alt="" width="100px">
+{% endblock derecha %}

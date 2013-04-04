@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block centro %}
+<h2>A profesores</h2>
+
+<h3>Talleres de capacitación:</h3>
+
+<ul>
+    <li><a href="{% url 'expresion' %}" title="">Expresión y creatividad en la educación parvularia</a></li><br>
+    <li><a href="{% url 'desafios' %}" title="">Los desafíos en el aula, una oportunidad pedagógica</a></li><br>
+    <li><a href="{% url 'estrategias' %}" title="">¿Cómo responder a los estándares de calidad?  Estrategias para la formación del niño lector y escritor</a></li><br>
+    <li><a href="{% url 'queleemos' %}" title="">¿Qué y cómo leemos?</a></li><br>
+</ul>
+{% endblock centro %}

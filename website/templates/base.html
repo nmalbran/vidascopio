@@ -1,0 +1,122 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Vidascopio</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Sacramento|Macondo+Swash+Caps' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{{STATIC_URL}}css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/blueprint/print.css" type="text/css" media="print">
+    <!--[if lt IE 8]>
+      <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+
+    <link rel="stylesheet" href="{{STATIC_URL}}css/vidascopio.css" type="text/css" media="screen">
+
+
+<script src="{{STATIC_URL}}js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var timeout         = 500;
+var closetimer      = 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{   jsddm_canceltimer();
+    jsddm_close();
+    ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{   if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{   closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{   if(closetimer)
+    {   window.clearTimeout(closetimer);
+        closetimer = null;}}
+
+$(document).ready(function()
+{   $('#jsddm > li').bind('mouseover', jsddm_open);
+    $('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
+</script>
+
+</head>
+
+
+<body>
+
+
+<div id="outer">
+    <div id="container" class="container">
+        <div id="header" class="span-20 last">
+            {% block header %}
+                <img src="{{STATIC_URL}}img/vidascopio.png" alt="">
+            {% endblock header %}
+
+        </div>
+
+        <div id="content" class="span-20 last clear">
+            <div id="content-inner" class="span-20">
+                <div id="content-inner-inner" class="span-20">
+
+                    <div id="menu" class="span-20 last">
+                        <ul id="jsddm">
+                            <li><a href="index.php">Inicio</a></li>
+                            <li><a href="#">¿ Quiénes Somos ?</a>
+                                <ul>
+                                    <li><a href="{% url 'historia' %}">Nuestra Historia</a></li>
+                                    <li><a href="{% url 'mision' %}">Misión/Visión</a></li>
+                                    <li><a href="{% url 'equipo' %}">Equipo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">¿ Qué ofrecemos ?</a>
+                                <ul>
+                                    <li><a href="{% url 'ninos' %}">A niños y jovenes</a></li>
+                                    <li><a href="{% url 'profesores' %}">A profesores</a></li>
+                                    <li><a href="{% url 'adultos' %}">A adultos</a></li>
+                                    <li><a href="{% url 'bibliotecas' %}">A bibliotecas y otras instituciones</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Compartimos</a>
+                                <ul>
+                                    <li><a href="{% url 'experiencia' %}">Nuestra experiencia</a></li>
+                                    <li><a href="{% url 'links' %}">Links</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contacto' %}">Contáctenos</a></li>
+                        </ul>
+                    </div>
+
+
+                    <!-- Centro -->
+                    <div id="centro" class="span-18 last clear">
+
+                        {% block centro %}
+
+                        {% endblock centro %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="derecha" class="span-3 last">
+            {% block derecha %}
+                <img src="{{ STATIC_URL }}img/fotos/1.jpg" alt="" width="200px">
+                <img src="{{ STATIC_URL }}img/fotos/2.jpg" alt="" width="200px">
+                <img src="{{ STATIC_URL }}img/fotos/3.jpg" alt="" width="200px">
+            {% endblock derecha %}
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
+

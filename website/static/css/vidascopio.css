@@ -1,0 +1,186 @@
+
+html, body{
+    background: #EEF3F1;
+}
+
+div#outer{
+    min-height: 700px;
+    background: #EEF3F1 url(../img/body.png) repeat-x scroll 50% 0;
+}
+
+div#container{
+}
+
+div#header{
+    height: 80px;
+    padding-top: 1em;
+    margin-bottom: -1em;
+    text-align: center;
+}
+
+#menu{
+    margin-top: 9px;
+    /*margin-left: 30px;*/
+}
+
+div#content{
+    /*border: 1px solid blue;*/
+    min-height: 50px;
+    background: #FFFFFF url(../img/bg-content.png) repeat-x scroll 50% 0;
+}
+
+div#content-inner{
+    background: transparent url(../img/bg-content-left.png) no-repeat scroll 0 0;
+    position: relative;
+    left: -10px;
+}
+
+div#content-inner-inner{
+    background: transparent url(../img/bg-content-right.png) no-repeat scroll 100% 0;
+    /*padding: 0 0 0 15px;*/
+    position: relative;
+    /*margin-right: -10px;*/
+    right: -20px;
+}
+
+#centro{
+    margin: 3em 0 0 3em;
+    /*background-color: red;*/
+}
+
+#derecha{
+    padding-top: 4em;
+    margin-left: 1em;
+}
+
+#derecha img{
+    margin-bottom: 5px;
+}
+
+
+.fotos img{
+    margin: 5px;
+}
+
+div.titulo{
+    font-size: 200%;
+    color: #52bf90;
+    text-align: center;
+}
+
+
+
+.texto-central{
+    font-size: 1.3em;
+    /*font-family: 'Macondo Swash Caps', cursive;*/
+    /*font-family: 'Sacramento', cursive;*/
+}
+
+
+h1, h2, h3, h4{
+    color: #1B7C52;
+}
+
+h4{
+    font-weight: bold;
+    margin-bottom: 0.6em;
+    margin-top: 1em;
+}
+
+#centro p{
+    font-size: 125%;
+    text-align: justify;
+    text-indent: 1em;
+    margin-bottom: 0.5em;
+}
+
+#centro li{
+    font-size: 125%;
+}
+
+#centro p.cita{
+    font-family: 'Sacramento', cursive;
+    font-size: 2.3em;
+}
+
+#centro p.autor{
+    font-family: 'Sacramento', cursive;
+    font-size: 2em;
+    text-align: right;
+    text-indent: 0;
+    margin-top: 1em;
+}
+
+#centro .marco{
+    border: 1px solid #52BF90;
+    padding: 1.5em;
+    margin: 2.5em 0 2em;
+}
+
+
+
+/* MENU */
+
+#jsddm
+{   margin: 0;
+    padding: 0;
+}
+
+    #jsddm li
+    {   float: left;
+        list-style: none;
+        font: 12px Tahoma, Arial}
+
+    #jsddm li a
+    {   display: block;
+        /*background: #324143;*/
+        background: #1B7C52;
+        padding: 5px 12px;
+        text-decoration: none;
+        border-right: 1px solid white;
+        width: 130px;
+        color: #EAFFED;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    #jsddm li a:hover
+    {
+        /*background: #24313C;*/
+        background: #80DFB6;
+    }
+
+        #jsddm li ul
+        {   margin: 0;
+            padding: 0;
+            position: absolute;
+            visibility: hidden;
+            border-top: 1px solid white}
+
+            #jsddm li ul li
+            {   float: none;
+                display: inline}
+
+            #jsddm li ul li a
+            {   width: auto;
+                background: #528F75;
+                color: #24313C;
+                width: 130px;
+                text-align: left;
+            }
+
+            #jsddm li ul li a:hover
+            {
+                /*background: #8EA344;*/
+                background: #52BF90;
+            }
+
+/*
+80DFB6
+
+52BF90
+528F75
+1B7C52
+
+
+*/

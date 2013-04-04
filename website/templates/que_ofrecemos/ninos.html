@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block centro %}
+<h2>A niños y Jóvenes</h2>
+
+<ul>
+    <li><a href="{% url 'escribir' %}">Proyecto <em>"Escribir como lectores"</em></a></li><br />
+    <li><a href="{% url 'talleres' %}">Talleres de música, teatro, lectura y escritura</a></li><br />
+    <li><a href="{% url 'salidas' %}">Salidas pegagógicas</a></li><br />
+</ul>
+{% endblock centro %}

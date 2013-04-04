@@ -24,9 +24,10 @@ urlpatterns = patterns('',
     url(r'^estrategias/?$', TemplateView.as_view(template_name="que_ofrecemos/estrategias.html"), name='estrategias'),
     url(r'^queleemos/?$', TemplateView.as_view(template_name="que_ofrecemos/queleemos.html"), name='queleemos'),
 
+    url(r'^entrelibros/?$', TemplateView.as_view(template_name="que_ofrecemos/entrelibros.html"), name='entrelibros'),
 
-    url(r'^experiencia/?$', TemplateView.as_view(template_name="experiencia.html"), name='experiencia'),
-    url(r'^links/?$', TemplateView.as_view(template_name="links.html"), name='links'),
+    url(r'^experiencia/?$', TemplateView.as_view(template_name="compartimos/experiencia.html"), name='experiencia'),
+    url(r'^links/?$', TemplateView.as_view(template_name="compartimos/links.html"), name='links'),
 
     url(r'^contacto/?$', TemplateView.as_view(template_name="contacto.html"), name='contacto'),
 

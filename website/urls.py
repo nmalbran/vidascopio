@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^escribir/?$', TemplateView.as_view(template_name="que_ofrecemos/escribir.html"), name='escribir'),
     url(r'^talleres/?$', TemplateView.as_view(template_name="que_ofrecemos/talleres.html"), name='talleres'),
     url(r'^salidas/?$', TemplateView.as_view(template_name="que_ofrecemos/salidas.html"), name='salidas'),
+    url(r'^lectura_compartida/?$', TemplateView.as_view(template_name="que_ofrecemos/lectura_compartida.html"), name='lectura_compartida'),
 
     url(r'^expresion/?$', TemplateView.as_view(template_name="que_ofrecemos/expresion.html"), name='expresion'),
     url(r'^desafios/?$', TemplateView.as_view(template_name="que_ofrecemos/desafios.html"), name='desafios'),

@@ -1,0 +1,43 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #383734; }
+
+#container {
+  background: white url("../img/fondo.png"); }
+
+#top {
+  width: 980px;
+  margin: 0 auto; }
+
+#page {
+  background: white;
+  min-height: 100px;
+  clear: both; }
+
+#footer {
+  background: #67bb95; }
+  #footer div {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    #footer div img {
+      margin: 0.5em 1em; }
+
+#logo {
+  float: left; }
+
+#menu {
+  float: left;
+  margin-top: 4em; }
+  #menu ul li {
+    float: left;
+    border-right: 1px solid white; }
+    #menu ul li:last-child {
+      border-right: 0; }
+    #menu ul li a {
+      background: #67bb95;
+      display: block;
+      padding: 1em 2em; }
+      #menu ul li a:hover {
+        background: #4faa7f; }

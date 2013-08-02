@@ -7,7 +7,8 @@ from django.conf import settings
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'vidascopio.views.home', name='home'),
-    url(r'^', include('website.urls')),
+    # url(r'^', include('website.urls')),
+    url(r'^', include('web2.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

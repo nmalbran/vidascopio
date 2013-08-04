@@ -12,7 +12,7 @@ html, body {
 
 #page {
   background: white;
-  min-height: 100px;
+  min-height: 800px;
   clear: both; }
 
 #footer {
@@ -25,19 +25,34 @@ html, body {
       margin: 0.5em 1em; }
 
 #logo {
-  float: left; }
+  position: absolute; }
 
 #menu {
-  float: left;
-  margin-top: 4em; }
-  #menu ul li {
-    float: left;
-    border-right: 1px solid white; }
-    #menu ul li:last-child {
-      border-right: 0; }
-    #menu ul li a {
-      background: #67bb95;
-      display: block;
-      padding: 1em 2em; }
-      #menu ul li a:hover {
-        background: #4faa7f; }
+  margin-top: 4em;
+  float: right; }
+  #menu ul {
+    background: #67bb95;
+    margin: 0;
+    padding: 0.5em 0 0 0;
+    border-top-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px; }
+    #menu ul li {
+      float: left;
+      border-right: 1px solid white; }
+      #menu ul li:last-child {
+        border-right: 0; }
+      #menu ul li:first-child a {
+        padding-left: 3.8em; }
+      #menu ul li a {
+        background: #67bb95;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        padding: 1em 2em; }
+        #menu ul li a:hover {
+          background: #4faa7f; }
+
+div.clear {
+  clear: both; }

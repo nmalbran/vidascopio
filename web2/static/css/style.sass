@@ -5,6 +5,17 @@ $color_menu_claro: #688DA1
 $color_menu_seleccionado: #4FAA7F
 $color_texto: #383734
 
+@mixin rounded-top-right
+    $vert: top
+    $horz: right
+    $radius: 10px
+
+    border-#{$vert}-#{$horz}-radius: $radius
+    -moz-border-radius-#{$vert}#{$horz}: $radius
+    -webkit-border-#{$vert}-#{$horz}-radius: $radius
+
+
+
 html, body
     margin: 0
     padding: 0
@@ -19,7 +30,7 @@ html, body
 
 #page
     background: white
-    min-height: 100px
+    min-height: 800px
     clear: both
 
 #footer
@@ -34,20 +45,35 @@ html, body
             margin: 0.5em 1em
 
 #logo
-    float: left
+    position: absolute
 
 #menu
-    float: left
     margin-top: 4em
-    ul li
-        float: left
-        border-right: 1px solid white
-        &:last-child
-            border-right: 0
+    float: right
+    ul
+        background: $verde
+        margin: 0
+        padding: 0.5em 0 0 0
+        @include rounded-top-right
 
-        a
-            background: $verde
-            display: block
-            padding: 1em 2em
-            &:hover
-                background: $color_menu_seleccionado
+        li
+            float: left
+            border-right: 1px solid white
+            &:last-child
+                border-right: 0
+
+            &:first-child a
+                padding-left: 3.8em
+
+            a
+                background: $verde
+                color: white
+                text-decoration: none
+                font-weight: bold
+                display: block
+                padding: 1em 2em
+                &:hover
+                    background: $color_menu_seleccionado
+
+div.clear
+    clear: both

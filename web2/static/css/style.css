@@ -63,13 +63,24 @@ div.palabras {
 div.cuadros div.cuadro {
   float: left;
   background: transparent url("../img/cuadro_foto.png") no-repeat;
-  width: 160px;
-  height: 154px;
+  width: 168px;
+  height: 168px;
   margin: 20px 28px 0 0;
-  padding: 30px 20px; }
+  padding: 24px 16px 8px; }
   div.cuadros div.cuadro:last-child {
     margin-right: 0; }
-  div.cuadros div.cuadro .inner {
+  div.cuadros div.cuadro a.inner {
+    display: block;
+    text-decoration: none;
     text-align: center;
     background: #b5b4b0;
-    color: white; }
+    color: white;
+    width: 100%;
+    height: 100%; }
+    div.cuadros div.cuadro a.inner span.text {
+      display: none;
+      padding: 1.3em; }
+    div.cuadros div.cuadro a.inner:hover span.text {
+      display: block; }
+    div.cuadros div.cuadro a.inner:hover span.img {
+      display: none; }

@@ -86,3 +86,7 @@ div.cuadros div.cuadro {
       display: block; }
     div.cuadros div.cuadro a.inner:hover span.img {
       display: none; }
+
+div.gran-texto {
+  padding: 0.5em;
+  text-align: justify; }

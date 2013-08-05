@@ -32,6 +32,7 @@ html, body
     background: white
     min-height: 800px
     clear: both
+    padding: 6em 3em 1em
 
 #footer
     background: $verde
@@ -75,5 +76,25 @@ html, body
                 &:hover
                     background: $color_menu_seleccionado
 
-div.clear
-    clear: both
+div.palabras
+    margin-top: 2em
+    min-height: 300px
+    background: #FFAAAA
+
+
+div.cuadros
+    div.cuadro
+        float: left
+        background: transparent url("../img/cuadro_foto.png") no-repeat
+        width: 160px
+        height: 154px
+        margin: 20px 28px 0 0
+        padding: 30px 20px
+
+        &:last-child
+            margin-right: 0
+
+        .inner
+            text-align: center
+            background: $gris
+            color: white

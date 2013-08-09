@@ -58,6 +58,44 @@ html, body {
 div.clear {
   clear: both; }
 
+div.menu-lateral {
+  width: 220px;
+  float: left; }
+  div.menu-lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    div.menu-lateral ul li:first-child a {
+      border-top-left-radius: 10px;
+      -moz-border-radius-topleft: 10px;
+      -webkit-border-top-left-radius: 10px; }
+    div.menu-lateral ul li:last-child a {
+      border-bottom: none;
+      border-bottom-left-radius: 10px;
+      -moz-border-radius-bottomleft: 10px;
+      -webkit-border-bottom-left-radius: 10px; }
+    div.menu-lateral ul li a {
+      border-bottom: 2px solid white;
+      background: #74b7d1;
+      display: list-item;
+      padding: 1em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold; }
+      div.menu-lateral ul li a:hover {
+        background: #5aa3b8; }
+    div.menu-lateral ul li a.activo {
+      background: #5aa3b8; }
+
+div.texto-columna {
+  width: 630px;
+  float: left;
+  background: #ccffd4;
+  border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  padding: 1em; }
+
 div.palabras {
   margin-top: 1.5em;
   text-align: center; }
@@ -90,3 +128,13 @@ div.cuadros div.cuadro {
 div.gran-texto {
   padding: 0.5em;
   text-align: justify; }
+
+div.cuadro-cita {
+  width: 60%;
+  background: transparent url("../img/fondo-cita.png");
+  font-style: italic;
+  padding: 0.5em; }
+  div.cuadro-cita .autor-cita {
+    float: right;
+    padding: 0.5em;
+    font-weight: bold; }

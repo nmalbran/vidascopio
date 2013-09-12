@@ -1,25 +1,28 @@
 {% extends "base.html" %}
 
+{% block title %}
+- {{pagina.titulo}}
+{% endblock title %}
+
 {% block content %}
     <div class="menu-lateral">
         <ul>
-            <li><a href="#">Niños y Jóvenes</a></li>
-            <li><a href="#">Adultos</a></li>
-            <li><a href="#">Profesores</a></li>
-            <li><a href="#">Bibliotecas y otras Instituciones</a></li>
+        {% for menu in menus %}
+            <li><a href="#" class="{% if menu in pagina.menus.all %}activo{% endif %}">{{menu.nombre}}</a></li>
+        {% endfor %}
         </ul>
     </div>
     <div class="texto-columna">
-        <h2>Escribir como lectores</h2>
+        <h2>{{pagina.titulo}}</h2>
 
 
         <div class="cuadro-cita">
-            <div class="texto-cita">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quam provident velit tempore ad. Minima, blanditiis, voluptate amet perferendis harum iste quisquam suscipit eaque aut nostrum totam necessitatibus dolores beatae!"</div>
-            <div class="autor-cita">Juanito</div>
+            <div class="texto-cita">{{pagina.cita|linebreaksbr}}</div>
+            <div class="autor-cita">{{pagina.autor_cita|safe}}</div>
             <div class="clear"></div>
         </div>
 
-
+        {{pagina.texto|safe|linebreaks}}
 
     </div>
 {% endblock content %}

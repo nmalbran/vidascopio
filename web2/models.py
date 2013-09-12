@@ -21,9 +21,9 @@ class Pagina(models.Model):
     titulo = models.CharField(max_length=255)
     slug = models.CharField(max_length=50, unique=True)
     menus = models.ManyToManyField('Menu')
-    cita = models.TextField()
-    autor_cita = models.CharField(max_length=100)
-    texto = models.TextField()
+    cita = models.TextField(blank=True, default='')
+    autor_cita = models.CharField(max_length=100, default='', blank=True)
+    texto = models.TextField(blank=True, default='')
 
     class Meta:
         verbose_name = _('Pagina')

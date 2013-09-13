@@ -1,0 +1,7 @@
+<div class="menu-lateral">
+    <ul>
+    {% for menu_item in menus %}
+        <li><a href="{% url 'select_pagina' slug=menu_item.slug %}" class="{% if menu_item in pagina.menus.all or menu_item == menu %}activo{% endif %}">{{menu_item.nombre}}</a></li>
+    {% endfor %}
+    </ul>
+</div>

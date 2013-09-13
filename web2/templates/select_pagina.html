@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+- {{menu.nombre}}
+{% endblock title %}
+
+{% block content %}
+    {% include "menu_lateral.html" %}
+    <div class="texto-columna">
+        <h2>{{menu.nombre}}</h2>
+
+        <div class='lista-paginas'>
+            <ul>
+            {% for pagina in menu.pagina_set.all %}
+                <li><a href="{% url 'pagina' slug=pagina.slug %}">{{pagina.titulo}}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+{% endblock content %}

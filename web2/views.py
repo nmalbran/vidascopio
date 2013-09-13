@@ -11,3 +11,13 @@ class PaginaView(DetailView):
         context = super(PaginaView, self).get_context_data(**kwargs)
         context['menus'] = Menu.objects.all()
         return context
+
+
+class PaginaSelectView(DetailView):
+    template_name = 'select_pagina.html'
+    model = Menu
+
+    def get_context_data(self, **kwargs):
+        context = super(PaginaSelectView, self).get_context_data(**kwargs)
+        context['menus'] = Menu.objects.all()
+        return context

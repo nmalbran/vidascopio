@@ -4,7 +4,7 @@ from django.views.generic import DetailView
 from models import Pagina, Menu
 
 class PaginaView(DetailView):
-    template_name = 'pagina.html'
+    template_name = 'web2/pagina.html'
     model = Pagina
 
     def get_context_data(self, **kwargs):
@@ -14,7 +14,7 @@ class PaginaView(DetailView):
 
 
 class PaginaSelectView(DetailView):
-    template_name = 'select_pagina.html'
+    template_name = 'web2/select_pagina.html'
     model = Menu
 
     def get_context_data(self, **kwargs):

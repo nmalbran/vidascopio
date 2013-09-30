@@ -3,7 +3,7 @@ import os
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -90,7 +90,8 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+#SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = "asdasdasdasdoko"
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

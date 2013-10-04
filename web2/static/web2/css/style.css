@@ -64,7 +64,10 @@ html, body {
         -webkit-border-top-right-radius: 0; }
         #menu ul li ul li {
           float: none;
-          display: inline; }
+          display: inline;
+          padding: 0;
+          margin: 0;
+        }
           #menu ul li ul li:first-child a {
             padding-left: 2em; }
           #menu ul li ul li a {

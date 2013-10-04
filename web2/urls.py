@@ -6,6 +6,7 @@ from web2.views import PaginaView, PaginaSelectView
 urlpatterns = patterns('',
     url(r'^/?$', TemplateView.as_view(template_name="web2/inicio.html")),
     url(r'^historia/?$', TemplateView.as_view(template_name="web2/historia.html"), name='web2.historia'),
+    url(r'^equipo/?$', TemplateView.as_view(template_name="web2/equipo.html"), name='web2.equipo'),
     url(r'^experiencia/?$', TemplateView.as_view(template_name="web2/experiencia.html"), name='web2.experiencia'),
     url(r'^links/?$', TemplateView.as_view(template_name="web2/links.html"), name='web2.links'),
 

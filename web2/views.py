@@ -1,5 +1,5 @@
 # Create your views here.
-from django.views.generic import DetailView
+from django.views.generic import DetailView, TemplateView
 
 from models import Pagina, Menu
 
@@ -19,5 +19,14 @@ class PaginaSelectView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PaginaSelectView, self).get_context_data(**kwargs)
+        context['menus'] = Menu.objects.all()
+        return context
+
+
+class QueOfrecemosView(TemplateView):
+    template_name = 'web2/que_ofrecemos.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(QueOfrecemosView, self).get_context_data(**kwargs)
         context['menus'] = Menu.objects.all()
         return context

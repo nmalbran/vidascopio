@@ -114,6 +114,16 @@ div.texto-columna {
   -webkit-border-top-right-radius: 10px;
   padding: 1em; }
 
+div.texto-columna img{
+  max-width: 500px;
+  margin-right: 10px;
+}
+
+div.texto-columna img.chica{
+  max-width: 130px;
+  float: left;
+}
+
 div.palabras {
   margin-top: 1.5em;
   text-align: center; }

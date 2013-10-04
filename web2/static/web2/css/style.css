@@ -54,6 +54,21 @@ html, body {
         padding: 1em 2em; }
         #menu ul li a:hover {
           background: #4faa7f; }
+      #menu ul li ul {
+        margin: 0;
+        padding: 0 0;
+        position: absolute;
+        visibility: hidden;
+        border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        -webkit-border-top-right-radius: 0; }
+        #menu ul li ul li {
+          float: none;
+          display: inline; }
+          #menu ul li ul li:first-child a {
+            padding-left: 2em; }
+          #menu ul li ul li a {
+            padding: 1em 2em; }
 
 div.clear {
   clear: both; }

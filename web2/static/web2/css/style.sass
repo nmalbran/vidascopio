@@ -76,6 +76,23 @@ html, body
                 &:hover
                     background: $color_menu_seleccionado
 
+            ul
+                margin: 0
+                padding: 0 0
+                position: absolute
+                visibility: hidden
+                @include rounded(top, right, 0)
+
+                li
+                    float: none
+                    display: inline
+
+                    &:first-child a
+                        padding-left: 2em
+
+                    a
+                        padding: 1em 2em
+
 div.clear
     clear: both
 

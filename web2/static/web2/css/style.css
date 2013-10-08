@@ -203,3 +203,20 @@ div.cuadro-cita {
     float: right;
     padding: 0.5em;
     font-weight: bold; }
+
+div.bloque-contacto {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background: #ccffd4;
+  margin: 1em;
+  padding: 1em; }
+  div.bloque-contacto div {
+    margin: 0.5em;
+    padding: 0.1em 0.5em; }
+  div.bloque-contacto .izq {
+    float: left;
+    padding-right: 5em; }
+  div.bloque-contacto .der {
+    float: left;
+    border-left: 1px solid black; }

@@ -3,6 +3,9 @@ html, body {
   padding: 0;
   color: #383734; }
 
+h4 {
+  margin-bottom: 0.3em; }
+
 #container {
   background: white url("../img/fondo.png"); }
 
@@ -35,6 +38,7 @@ html, body {
     background: #67bb95;
     margin: 0;
     padding: 0.5em 0 0 0;
+    list-style: none;
     border-top-right-radius: 10px;
     -moz-border-radius-topright: 10px;
     -webkit-border-top-right-radius: 10px; }
@@ -114,10 +118,18 @@ div.texto-columna {
   padding: 1em; }
   div.texto-columna img {
     max-width: 500px;
-    margin-right: 10px; }
+    margin-right: 0.5em;
+    margin-bottom: 3em; }
   div.texto-columna img.chica {
     max-width: 130px;
     float: left; }
+  div.texto-columna div.col-izq {
+    width: 450px;
+    float: left; }
+  div.texto-columna div.col-der {
+    width: 140px;
+    float: left;
+    margin-left: 1.5em; }
 
 div.palabras {
   margin-top: 1.5em;

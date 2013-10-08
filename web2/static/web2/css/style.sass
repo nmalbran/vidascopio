@@ -21,6 +21,9 @@ html, body
     padding: 0
     color: $color_texto
 
+h4
+    margin-bottom: 0.3em
+
 #container
     background: white url("../img/fondo.png")
 
@@ -55,6 +58,7 @@ html, body
         background: $verde
         margin: 0
         padding: 0.5em 0 0 0
+        list-style: none
         @include rounded(top, right)
 
         li
@@ -140,11 +144,23 @@ div.texto-columna
 
     img
         max-width: 500px
-        margin-right: 10px
+        margin-right: 0.5em
+        margin-bottom: 3em
 
     img.chica
         max-width: 130px
         float: left
+
+    div.col-izq
+        width: 450px
+        float: left
+
+    div.col-der
+        width: 140px
+        float: left
+        margin-left: 1.5em
+
+
 
 
 div.palabras

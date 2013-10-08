@@ -30,3 +30,7 @@ class QueOfrecemosView(TemplateView):
         context = super(QueOfrecemosView, self).get_context_data(**kwargs)
         context['menus'] = Menu.objects.all()
         return context
+
+
+class ContactoView(TemplateView):
+    template_name = 'web2/contacto.html'

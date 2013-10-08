@@ -131,6 +131,36 @@ div.texto-columna {
     float: left;
     margin-left: 1.5em; }
 
+div.que-ofrecemos {
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  min-height: 234px;
+  padding: 0; }
+  div.que-ofrecemos h3 {
+    font-size: 1.5em;
+    text-align: right;
+    padding: 1em; }
+
+div.galeria {
+  clear: both;
+  padding: 0;
+  width: 850px; }
+  div.galeria h2 {
+    text-align: left;
+    padding-top: 1.5em;
+    border-bottom: 2px solid #b5b4b0; }
+  div.galeria .fotos {
+    margin-top: 1em; }
+    div.galeria .fotos .foto {
+      float: left;
+      margin: 10px;
+      width: 150px;
+      height: 150px; }
+      div.galeria .fotos .foto img {
+        width: 150px;
+        height: 150px; }
+
 div.palabras {
   margin-top: 1.5em;
   text-align: center; }

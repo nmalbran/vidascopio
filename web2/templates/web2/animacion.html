@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Vidascopio</title>
+
+    <link href="//vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/4.1/video.js"></script>
+
+    <style type="text/css">
+
+    div.animacion{
+        margin: 4em auto;
+        width: 820px;
+    }
+    </style>
+
+
+</head>
+<body>
+    <div class="animacion">
+        <video id="ani_id" class="video-js vjs-default-skin"
+          preload="auto" width="820" height="478"
+          poster="{{STATIC_URL}}web2/img/poster.png"
+          data-setup='{"controls":false, "autoplay": true}'>
+         <source src="{{STATIC_URL}}web2/img/vidascopio.flv" type='video/x-flv' />
+        </video>
+    </div>
+
+    <script type="text/javascript">
+
+
+        videojs('ani_id').ready(function(){
+            this.play();
+
+            videojs('ani_id').on('timeupdate', function(){
+                if(this.currentTime() >= 5){
+                    window.location = "{% url 'inicio' %}";
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

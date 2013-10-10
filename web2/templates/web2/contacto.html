@@ -9,24 +9,35 @@
     <div class="bloque-contacto">
 
 
-        <div class="clear">VIDASCOPIO</div>
+        {% include "web2/contacto_comun.html" %}
 
-        <div class="izq">
-        Santiago - Chile
-        </div>
-
-        <div class="der">
-        Telefono:
-        <br>
-        Email:
-        </div>
-
-        <div class="clear"></div>
         <div class="formulario">
             <form method="post">
             {% csrf_token %}
-            {{form.as_p}}
+
+            <div class="col">
+                <div class="row">
+                    <input type="text" class="{% if form.nombre.errors %}error{% endif %}" id="id_{{form.nombre.html_name}}" name="{{form.nombre.html_name}}" maxlength="75" placeholder="{{form.nombre.label}}:" {% if form.nombre.value %}value="{{form.nombre.value}}"{% endif %} >
+                </div>
+
+                <div class="row">
+                    <input type="text" class="{% if form.mail.errors %}error{% endif %}" id="id_{{form.mail.html_name}}" name="{{form.mail.html_name}}" maxlength="75" placeholder="{{form.mail.label}}:" {% if form.mail.value %}value="{{form.mail.value}}"{% endif %}>
+                    {% if form.mail.errors %}
+                        {{form.mail.errors}}
+                    {% endif %}
+                </div>
+
+                <div class="row">
+                    <input type="text" class="{% if form.telefono.errors %}error{% endif %}" id="id_{{form.telefono.html_name}}" name="{{form.telefono.html_name}}" maxlength="75" placeholder="{{form.telefono.label}}:" {% if form.telefono.value %}value="{{form.telefono.value}}"{% endif %}>
+                </div>
+            </div>
+            <div class="col">
+                <textarea cols="40" class="{% if form.mensaje.errors %}error{% endif %}" id="id_{{form.mensaje.html_name}}" name="{{form.mensaje.html_name}}" rows="10" placeholder="{{form.mensaje.label}}:">{% if form.mensaje.value %}{{form.mensaje.value}}{% endif %}</textarea>
+            </div>
+
+
             <input type="submit" value="Enviar">
+            <div class="clear"></div>
             </form>
         </div>
     </div>

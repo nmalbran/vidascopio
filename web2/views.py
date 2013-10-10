@@ -58,7 +58,7 @@ class ContactoView(View):
             """ % form.cleaned_data
 
             message = PMMail(api_key = os.environ.get('POSTMARK_API_KEY'),
-                             subject = "Contacto desde Vidascopio.cl",
+                             subject = "Contacto de '%s' desde Vidascopio.cl" % form.cleaned_data['nombre'],
                              sender = "contacto@vidascopio.cl",
                              to = "nmalbran@gmail.com",
                              text_body = body,

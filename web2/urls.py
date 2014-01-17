@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^experiencia/?$', TemplateView.as_view(template_name="web2/experiencia.html"), name='web2.experiencia'),
     url(r'^links/?$', TemplateView.as_view(template_name="web2/links.html"), name='web2.links'),
     url(r'^que-ofrecemos/?$', QueOfrecemosView.as_view(), name='que_ofrecemos'),
+    url(r'^galeria/?$', TemplateView.as_view(template_name='web2/galeria.html'), name='web2.galeria'),
 
     url(r'^contacto/?$', ContactoView.as_view(), name='web2.contacto'),
 

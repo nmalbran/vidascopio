@@ -6,15 +6,21 @@ html, body {
 h4 {
   margin-bottom: 0.3em; }
 
+h2 {
+  font-family: "Arial Narrow", sans-serif;
+  font-weight: normal;
+  font-size: 30;
+  color: white; }
+
 #container {
-  background: white url("../img/fondo.png"); }
+  background: white url("../img/vidascopio_background.jpg") repeat-x; }
 
 #top {
   width: 980px;
   margin: 0 auto; }
 
 #page {
-  background: white;
+  background: #ffffed;
   clear: both;
   padding: 6em 3em 1em; }
 
@@ -35,7 +41,7 @@ h4 {
   margin-top: 4em;
   float: right; }
   #menu ul {
-    background: #67bb95;
+    background: #408fb1;
     margin: 0;
     padding: 0.5em 0 0 0;
     list-style: none;
@@ -50,14 +56,15 @@ h4 {
       #menu ul li:first-child a {
         padding-left: 3.8em; }
       #menu ul li a {
-        background: #67bb95;
-        color: white;
-        text-decoration: none;
+        font-family: "Arial Narrow", sans-serif;
         font-weight: bold;
+        color: #d9f2fa;
+        background: #408fb1;
+        text-decoration: none;
         display: block;
         padding: 1em 2em; }
         #menu ul li a:hover {
-          background: #4faa7f; }
+          background: #71b9d8; }
       #menu ul li ul {
         margin: 0;
         padding: 0 0;
@@ -96,26 +103,33 @@ div.menu-lateral {
       -moz-border-radius-bottomleft: 10px;
       -webkit-border-bottom-left-radius: 10px; }
     div.menu-lateral ul li a {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 16;
+      color: #184051;
       border-bottom: 2px solid white;
-      background: #74b7d1;
+      background: #d9c497;
       display: list-item;
       padding: 1em;
-      color: white;
-      text-decoration: none;
-      font-weight: bold; }
+      text-decoration: none; }
       div.menu-lateral ul li a:hover {
-        background: #5aa3b8; }
+        background: #d9c497; }
     div.menu-lateral ul li a.activo {
-      background: #5aa3b8; }
+      background: #d9c497; }
 
 div.texto-columna {
   width: 630px;
   float: left;
-  background: #ccffd4;
+  background: #2b6781;
   border-top-right-radius: 10px;
   -moz-border-radius-topright: 10px;
   -webkit-border-top-right-radius: 10px;
   padding: 1em; }
+  div.texto-columna p {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 16;
+    color: white; }
   div.texto-columna img {
     max-width: 500px;
     margin-right: 0.5em;
@@ -195,9 +209,12 @@ div.gran-texto {
   text-align: justify; }
 
 div.cuadro-cita {
+  font-family: Arial;
+  font-style: italic;
+  font-size: 16;
+  color: #ccff99;
   width: 60%;
   background: transparent url("../img/fondo-cita.png");
-  font-style: italic;
   padding: 0.5em; }
   div.cuadro-cita .autor-cita {
     float: right;
@@ -208,7 +225,7 @@ div.bloque-contacto {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  background: #ccffd4;
+  background: #2b6781;
   margin: 1em;
   padding: 1em; }
   div.bloque-contacto div {

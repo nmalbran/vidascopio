@@ -1,14 +1,48 @@
 $verde: #67BB95
 $gris: #B5B4B0
 $azul: #75B6D1
-$color_menu_claro: #688DA1
-$color_menu_seleccionado: #4FAA7F
+// $color_menu_claro: #688DA1
+// $color_menu_seleccionado: #4FAA7F
 $color_texto: #383734
 
-$menu_lateral_seleccionado: #5aa3b8
-$menu_lateral_normal: #74b7d1
+//$menu_lateral_seleccionado: #5aa3b8
+$menu_lateral_seleccionado: #D9C497
+$menu_lateral_normal: #D9C497
 
-$fondo_verde: #ccffd4
+$fondo_texto: #2B6781
+
+$fondo_contenido_principal: #FFFFED
+
+$fondo_menu_principal: #408FB1
+$menu_principal_seleccionado: #71B9D8
+
+
+@mixin texto_menu_principal()
+    font-family: 'Arial Narrow', sans-serif
+    font-weight: bold
+    //font-size: 20
+    color: #D9F2FA
+
+@mixin texto_menu_lateral()
+    font-family: Arial
+    font-weight: bold
+    font-size: 16
+    color: #184051
+    //line-height: 10
+
+@mixin texto_cita()
+    font-family: Arial
+    font-style: italic
+    font-size: 16
+    color: #CCFF99
+
+@mixin texto_parrafos()
+    //arial - normal - 16 - #FFFFFF (interlineado  140)
+    font-family: Arial
+    font-weight: normal
+    font-size: 16
+    color: white
+    //line-height: 140
 
 @mixin rounded($vert, $horz, $radius: 10px)
     border-#{$vert}-#{$horz}-radius: $radius
@@ -29,15 +63,21 @@ html, body
 h4
     margin-bottom: 0.3em
 
+h2
+    font-family: 'Arial Narrow', sans-serif
+    font-weight: normal
+    font-size: 30
+    color: white
+
 #container
-    background: white url("../img/fondo.png")
+    background: white url("../img/vidascopio_background.jpg") repeat-x
 
 #top
     width: 980px
     margin: 0 auto
 
 #page
-    background: white
+    background: $fondo_contenido_principal
     clear: both
     padding: 6em 3em 1em
 
@@ -60,7 +100,7 @@ h4
     margin-top: 4em
     float: right
     ul
-        background: $verde
+        background: $fondo_menu_principal
         margin: 0
         padding: 0.5em 0 0 0
         list-style: none
@@ -76,14 +116,13 @@ h4
                 padding-left: 3.8em
 
             a
-                background: $verde
-                color: white
+                @include texto_menu_principal()
+                background: $fondo_menu_principal
                 text-decoration: none
-                font-weight: bold
                 display: block
                 padding: 1em 2em
                 &:hover
-                    background: $color_menu_seleccionado
+                    background: $menu_principal_seleccionado
 
             ul
                 margin: 0
@@ -125,13 +164,12 @@ div.menu-lateral
 
 
             a
+                @include texto_menu_lateral()
                 border-bottom: 2px solid white
                 background: $menu_lateral_normal
                 display: list-item
                 padding: 1em
-                color: white
                 text-decoration: none
-                font-weight: bold
 
                 &:hover
                     background: $menu_lateral_seleccionado
@@ -143,9 +181,12 @@ div.menu-lateral
 div.texto-columna
     width: 630px
     float: left
-    background: $fondo_verde
+    background: $fondo_texto
     @include rounded(top, right)
     padding: 1em
+
+    p
+        @include texto_parrafos()
 
     img
         max-width: 500px
@@ -247,9 +288,9 @@ div.gran-texto
 
 
 div.cuadro-cita
+    @include texto_cita()
     width: 60%
     background: transparent url('../img/fondo-cita.png')
-    font-style: italic
     padding: 0.5em
 
     .autor-cita
@@ -260,7 +301,7 @@ div.cuadro-cita
 
 div.bloque-contacto
     @include all-rounded(5px)
-    background: $fondo_verde
+    background: $fondo_texto
     margin: 1em
     padding: 1em
 

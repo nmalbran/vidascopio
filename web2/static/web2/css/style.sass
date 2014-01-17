@@ -4,6 +4,7 @@ $azul: #75B6D1
 // $color_menu_claro: #688DA1
 // $color_menu_seleccionado: #4FAA7F
 $color_texto: #383734
+$color_verde_cita: #CCFF99
 
 //$menu_lateral_seleccionado: #5aa3b8
 $menu_lateral_seleccionado: #D9C497
@@ -16,12 +17,6 @@ $fondo_contenido_principal: #FFFFED
 
 $fondo_menu_principal: #408FB1
 $menu_principal_seleccionado: #71B9D8
-
-// Links:
-// reposo: #FFFFFF
-// roll-on: #CCFF99
-// click: #CCFF99
-// visitado: #FFFFFF
 
 
 @mixin texto_menu_principal()
@@ -41,10 +36,9 @@ $menu_principal_seleccionado: #71B9D8
     font-family: Arial
     font-style: italic
     font-size: 16
-    color: #CCFF99
+    color: $color_verde_cita
 
 @mixin texto_parrafos()
-    //arial - normal - 16 - #FFFFFF (interlineado  140)
     font-family: Arial
     font-weight: normal
     font-size: 16
@@ -82,6 +76,12 @@ h4
     margin-bottom: 0.3em
     color: white
 
+a
+    &:link, &:visited
+        color: white
+    &:hover, &:active
+        color: $color_verde_cita
+
 #container
     background: $fondo url("../img/vidascopio_background.jpg") repeat-x
 
@@ -93,6 +93,7 @@ h4
     background: $fondo_contenido_principal
     clear: both
     padding: 7em 3em 1em
+    @include rounded(top, left)
 
 #footer
     background: $verde
@@ -200,7 +201,6 @@ div.texto-columna
     float: left
     background: $fondo_texto
     @include rounded(top, right)
-    @include rounded(bottom, right)
     padding: 0 5%
     min-height: 234px
 
@@ -229,7 +229,6 @@ div.texto-columna
 div.que-ofrecemos
     @include rounded(bottom, right)
     min-height: 234px
-    padding: 0
 
     h3
         font-size: 1.5em
@@ -303,8 +302,12 @@ div.cuadros
                 display: none
 
 div.gran-texto
+    color: white
     padding: 0.5em
     text-align: justify
+    background: $fondo_texto
+    @include rounded(top, left)
+    @include rounded(top, right)
 
 
 div.cuadro-cita

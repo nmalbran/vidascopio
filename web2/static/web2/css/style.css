@@ -41,12 +41,12 @@ a:hover, a:active {
 #footer {
   background: #67bb95;
   clear: both; }
+  #footer img {
+    margin: 0.5em 1em; }
   #footer div {
     width: 80%;
     margin: 0 auto;
     text-align: center; }
-    #footer div img {
-      margin: 0.5em 1em; }
 
 #logo {
   position: absolute; }

@@ -9,12 +9,19 @@ $color_texto: #383734
 $menu_lateral_seleccionado: #D9C497
 $menu_lateral_normal: #D9C497
 
+$fondo: #008C8D
 $fondo_texto: #2B6781
 
 $fondo_contenido_principal: #FFFFED
 
 $fondo_menu_principal: #408FB1
 $menu_principal_seleccionado: #71B9D8
+
+// Links:
+// reposo: #FFFFFF
+// roll-on: #CCFF99
+// click: #CCFF99
+// visitado: #FFFFFF
 
 
 @mixin texto_menu_principal()
@@ -59,18 +66,24 @@ html, body
     margin: 0
     padding: 0
     color: $color_texto
-
-h4
-    margin-bottom: 0.3em
+    font-family: 'Arial Narrow', sans-serif
 
 h2
     font-family: 'Arial Narrow', sans-serif
     font-weight: normal
     font-size: 30
+
+    &.blanco
+        color: white
+h3
+    color: white
+
+h4
+    margin-bottom: 0.3em
     color: white
 
 #container
-    background: white url("../img/vidascopio_background.jpg") repeat-x
+    background: $fondo url("../img/vidascopio_background.jpg") repeat-x
 
 #top
     width: 980px
@@ -79,7 +92,7 @@ h2
 #page
     background: $fondo_contenido_principal
     clear: both
-    padding: 6em 3em 1em
+    padding: 7em 3em 1em
 
 #footer
     background: $verde
@@ -113,14 +126,17 @@ h2
                 border-right: 0
 
             &:first-child a
-                padding-left: 3.8em
+                padding-left: 2.7em
+
+            &:last-child a
+                padding-right: 2.5em
 
             a
                 @include texto_menu_principal()
                 background: $fondo_menu_principal
                 text-decoration: none
                 display: block
-                padding: 1em 2em
+                padding: 0.7em 1.5em
                 &:hover
                     background: $menu_principal_seleccionado
 
@@ -136,6 +152,7 @@ h2
                     display: inline
                     padding: 0
                     margin: 0
+                    border: none
 
                     &:first-child a
                         padding-left: 2em
@@ -147,7 +164,7 @@ div.clear
     clear: both
 
 div.menu-lateral
-    width: 220px
+    width: 20%
     float: left
 
     ul
@@ -179,19 +196,22 @@ div.menu-lateral
 
 
 div.texto-columna
-    width: 630px
+    width: 70%
     float: left
     background: $fondo_texto
     @include rounded(top, right)
-    padding: 1em
+    @include rounded(bottom, right)
+    padding: 0 5%
+    min-height: 234px
 
     p
         @include texto_parrafos()
+        text-align: justify
+        text-indent: 1em
 
     img
-        max-width: 500px
-        margin-right: 0.5em
-        margin-bottom: 3em
+        max-width: 100%
+        margin: 1em auto 3em
 
     img.chica
         max-width: 130px
@@ -215,6 +235,7 @@ div.que-ofrecemos
         font-size: 1.5em
         text-align: right
         padding: 1em
+        color: white
 
 div.galeria
     clear: both

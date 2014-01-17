@@ -1,19 +1,25 @@
 html, body {
   margin: 0;
   padding: 0;
-  color: #383734; }
-
-h4 {
-  margin-bottom: 0.3em; }
+  color: #383734;
+  font-family: "Arial Narrow", sans-serif; }
 
 h2 {
   font-family: "Arial Narrow", sans-serif;
   font-weight: normal;
-  font-size: 30;
+  font-size: 30; }
+  h2.blanco {
+    color: white; }
+
+h3 {
+  color: white; }
+
+h4 {
+  margin-bottom: 0.3em;
   color: white; }
 
 #container {
-  background: white url("../img/vidascopio_background.jpg") repeat-x; }
+  background: #008c8d url("../img/vidascopio_background.jpg") repeat-x; }
 
 #top {
   width: 980px;
@@ -22,7 +28,7 @@ h2 {
 #page {
   background: #ffffed;
   clear: both;
-  padding: 6em 3em 1em; }
+  padding: 7em 3em 1em; }
 
 #footer {
   background: #67bb95;
@@ -54,7 +60,9 @@ h2 {
       #menu ul li:last-child {
         border-right: 0; }
       #menu ul li:first-child a {
-        padding-left: 3.8em; }
+        padding-left: 2.7em; }
+      #menu ul li:last-child a {
+        padding-right: 2.5em; }
       #menu ul li a {
         font-family: "Arial Narrow", sans-serif;
         font-weight: bold;
@@ -62,7 +70,7 @@ h2 {
         background: #408fb1;
         text-decoration: none;
         display: block;
-        padding: 1em 2em; }
+        padding: 0.7em 1.5em; }
         #menu ul li a:hover {
           background: #71b9d8; }
       #menu ul li ul {
@@ -77,7 +85,8 @@ h2 {
           float: none;
           display: inline;
           padding: 0;
-          margin: 0; }
+          margin: 0;
+          border: none; }
           #menu ul li ul li:first-child a {
             padding-left: 2em; }
           #menu ul li ul li a {
@@ -87,7 +96,7 @@ div.clear {
   clear: both; }
 
 div.menu-lateral {
-  width: 220px;
+  width: 20%;
   float: left; }
   div.menu-lateral ul {
     list-style: none;
@@ -118,22 +127,27 @@ div.menu-lateral {
       background: #d9c497; }
 
 div.texto-columna {
-  width: 630px;
+  width: 70%;
   float: left;
   background: #2b6781;
   border-top-right-radius: 10px;
   -moz-border-radius-topright: 10px;
   -webkit-border-top-right-radius: 10px;
-  padding: 1em; }
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  padding: 0 5%;
+  min-height: 234px; }
   div.texto-columna p {
     font-family: Arial;
     font-weight: normal;
     font-size: 16;
-    color: white; }
+    color: white;
+    text-align: justify;
+    text-indent: 1em; }
   div.texto-columna img {
-    max-width: 500px;
-    margin-right: 0.5em;
-    margin-bottom: 3em; }
+    max-width: 100%;
+    margin: 1em auto 3em; }
   div.texto-columna img.chica {
     max-width: 130px;
     float: left; }
@@ -154,7 +168,8 @@ div.que-ofrecemos {
   div.que-ofrecemos h3 {
     font-size: 1.5em;
     text-align: right;
-    padding: 1em; }
+    padding: 1em;
+    color: white; }
 
 div.galeria {
   clear: both;

@@ -154,8 +154,9 @@ div.texto-columna {
     max-width: 100%;
     margin: 1em auto 3em; }
   div.texto-columna img.chica {
-    max-width: 130px;
-    float: left; }
+    max-height: 250px;
+    float: left;
+    margin-right: 1em; }
   div.texto-columna div.col-izq {
     width: 450px;
     float: left; }

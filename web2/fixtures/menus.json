@@ -1,6 +1,6 @@
 [
-{"pk": 1, "model": "web2.menu", "fields": {"nombre": "Ni\u00f1os y J\u00f3venes", "slug": "ninos-y-jovenes", "orden": 1}},
-{"pk": 2, "model": "web2.menu", "fields": {"nombre": "Adultos", "slug": "adultos", "orden": 2}},
-{"pk": 3, "model": "web2.menu", "fields": {"nombre": "Profesores", "slug": "profesores", "orden": 3}},
-{"pk": 4, "model": "web2.menu", "fields": {"nombre": "Bibliotecas y otras Instituciones", "slug": "bibliotecas-y-otras-instituciones", "orden": 4}}
+{"pk": 1, "model": "web2.menu", "fields": {"nombre": "Ni\u00f1os y J\u00f3venes", "orden": 1, "slug": "ninos-y-jovenes", "titulo": "Ni\u00f1os y J\u00f3venes"}},
+{"pk": 2, "model": "web2.menu", "fields": {"nombre": "Adultos", "orden": 2, "slug": "adultos", "titulo": "Adultos"}},
+{"pk": 3, "model": "web2.menu", "fields": {"nombre": "Profesores", "orden": 3, "slug": "profesores", "titulo": "Profesores: Talleres de capacitaci\u00f3n"}},
+{"pk": 4, "model": "web2.menu", "fields": {"nombre": "Bibliotecas y otras Instituciones", "orden": 4, "slug": "bibliotecas-y-otras-instituciones", "titulo": "Bibliotecas y otras Instituciones"}}
 ]

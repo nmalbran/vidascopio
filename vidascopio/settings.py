@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'web2',
     'website',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging

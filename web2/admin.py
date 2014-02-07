@@ -4,7 +4,7 @@ from web2.models import *
 
 class MenuAdmin(admin.ModelAdmin):
     model = Menu
-    list_display = ('orden', 'nombre', 'slug')
+    list_display = ('orden', 'nombre', 'slug', 'titulo')
 
 
 class PaginaAdmin(admin.ModelAdmin):

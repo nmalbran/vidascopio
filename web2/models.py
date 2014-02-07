@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class Menu(models.Model):
     nombre = models.CharField(max_length=100)
+    titulo = models.CharField(max_length=254)
     slug = models.CharField(max_length=50, unique=True)
     orden = models.IntegerField()
 

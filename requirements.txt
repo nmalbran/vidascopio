@@ -4,3 +4,4 @@ dj-database-url==0.2.1
 gunicorn==0.17.2
 psycopg2==2.5
 python-postmark==0.3.2
+South==0.8.4

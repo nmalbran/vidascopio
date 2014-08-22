@@ -9,8 +9,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'vidascopio.views.home', name='home'),
     url(r'^/?$', TemplateView.as_view(template_name="construccion.html")),
-    url(r'web2/', include('web2.urls')),
-    url(r'old/', include('website.urls')),
+    url(r'^web2/', include('web2.urls')),
+    url(r'^old/', include('website.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

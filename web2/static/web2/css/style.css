@@ -187,12 +187,12 @@ div.galeria {
     margin-top: 1em; }
     div.galeria .fotos .foto {
       float: left;
-      margin: 10px;
-      width: 150px;
-      height: 150px; }
+      margin: 16px;
+      width: 180px;
+      height: 180px; }
       div.galeria .fotos .foto img {
-        width: 150px;
-        height: 150px; }
+        width: 180px;
+        height: 180px; }
 
 div.palabras {
   margin-top: 1.5em;

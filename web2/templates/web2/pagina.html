@@ -7,14 +7,15 @@
 {% block content %}
     {% include "web2/menu_lateral.html" %}
     <div class="texto-columna">
-        <h2 class="blanco">{{pagina.titulo}}</h2>
+        <h2 class="blanco">{{pagina.titulo|safe}}</h2>
 
-
+        {% if pagina.cita %}
         <div class="cuadro-cita">
             <div class="texto-cita">{{pagina.cita|linebreaksbr}}</div>
             <div class="autor-cita">{{pagina.autor_cita|safe}}</div>
             <div class="clear"></div>
         </div>
+        {% endif %}
 
         {{pagina.texto|safe|linebreaks}}
 

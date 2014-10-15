@@ -2,12 +2,17 @@ html, body {
   margin: 0;
   padding: 0;
   color: #383734;
-  font-family: "Arial Narrow", sans-serif; }
+  font-family: "Arial Narrow", sans-serif;
+  font-size: 0.9em;
+  background: #67bb95; }
+
+h2, h3, h4 {
+  margin: 1.3em auto 1em; }
 
 h2 {
   font-family: "Arial Narrow", sans-serif;
   font-weight: normal;
-  font-size: 30; }
+  font-size: 2.2em; }
   h2.blanco {
     color: white; }
 
@@ -15,8 +20,8 @@ h3 {
   color: white; }
 
 h4 {
-  margin-bottom: 0.3em;
-  color: white; }
+  color: white;
+  font-size: 1.4em; }
 
 a:link, a:visited {
   color: white; }
@@ -32,12 +37,13 @@ a:hover, a:active {
 
 #header {
   width: 100%;
-  overflow: auto; }
+  overflow: auto;
+  zoom: 1; }
 
 #page {
   background: #ffffed;
   clear: both;
-  padding: 7em 3em 1em;
+  padding: 8.6em 3em 1.5em;
   border-top-left-radius: 10px;
   -moz-border-radius-topleft: 10px;
   -webkit-border-top-left-radius: 10px; }
@@ -50,20 +56,24 @@ a:hover, a:active {
   #footer div {
     width: 80%;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    font-size: 1.2em; }
 
 #logo {
   position: absolute; }
 
 #menu {
-  margin-top: 4em;
+  margin-top: 68px;
   float: right;
-  width: 801px; }
+  width: 800px; }
   #menu ul {
     background: #408fb1;
     margin: 0;
-    padding: 0.5em 0 0 0;
+    padding: 5px 0 0 0;
     list-style: none;
+    width: 100%;
+    overflow: auto;
+    zoom: 1;
     border-top-right-radius: 10px;
     -moz-border-radius-topright: 10px;
     -webkit-border-top-right-radius: 10px; }
@@ -73,9 +83,7 @@ a:hover, a:active {
       #menu ul li:last-child {
         border-right: 0; }
       #menu ul li:first-child a {
-        padding-left: 70px; }
-      #menu ul li:last-child a {
-        padding-right: 2.5em; }
+        padding-left: 55px; }
       #menu ul li a {
         font-family: "Arial Narrow", sans-serif;
         font-weight: bold;
@@ -83,12 +91,14 @@ a:hover, a:active {
         background: #408fb1;
         text-decoration: none;
         display: block;
-        padding: 0.7em 1.5em; }
+        padding: 0.7em 25px;
+        font-size: 15px; }
         #menu ul li a:hover {
           background: #71b9d8; }
       #menu ul li ul {
         margin: 0;
         padding: 0 0;
+        width: auto;
         position: absolute;
         visibility: hidden;
         border-top-right-radius: 0px;
@@ -118,7 +128,8 @@ a:hover, a:active {
 
 div.menu-lateral {
   width: 20%;
-  float: left; }
+  float: left;
+  font-size: 1.2em; }
   div.menu-lateral ul {
     list-style: none;
     margin: 0;
@@ -151,11 +162,12 @@ div.texto-columna {
   width: 70%;
   float: left;
   background: #2b6781;
+  color: white;
   border-top-right-radius: 10px;
   -moz-border-radius-topright: 10px;
   -webkit-border-top-right-radius: 10px;
   padding: 0 5%;
-  min-height: 234px; }
+  min-height: 226px; }
   div.texto-columna p {
     font-family: Arial;
     font-weight: normal;
@@ -163,13 +175,18 @@ div.texto-columna {
     color: white;
     text-align: justify;
     text-indent: 1em; }
+    div.texto-columna p img {
+      margin-left: -1em; }
+    div.texto-columna p a img {
+      margin-left: 0; }
   div.texto-columna img {
     max-width: 100%;
     margin: 1em auto 3em; }
   div.texto-columna img.chica {
     max-height: 250px;
     float: left;
-    margin-right: 1em; }
+    margin-right: 1em;
+    margin-bottom: 4em; }
   div.texto-columna div.col-izq {
     width: 450px;
     float: left; }
@@ -182,7 +199,7 @@ div.que-ofrecemos {
   border-bottom-right-radius: 10px;
   -moz-border-radius-bottomright: 10px;
   -webkit-border-bottom-right-radius: 10px;
-  min-height: 234px; }
+  min-height: 226px; }
   div.que-ofrecemos h3 {
     font-size: 1.5em;
     text-align: right;
@@ -211,35 +228,41 @@ div.palabras {
   margin-top: 1.5em;
   text-align: center; }
 
-div.cuadros div.cuadro {
-  float: left;
-  background: transparent url("../img/cuadro_foto.png") no-repeat;
-  width: 168px;
-  height: 168px;
-  margin: 20px 28px 0 0;
-  padding: 24px 16px 8px; }
-  div.cuadros div.cuadro:last-child {
-    margin-right: 0; }
-  div.cuadros div.cuadro a.inner {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    background: #b5b4b0;
-    color: white;
-    width: 100%;
-    height: 100%; }
-    div.cuadros div.cuadro a.inner span.text {
-      display: none;
-      padding: 1.3em; }
-    div.cuadros div.cuadro a.inner:hover span.text {
-      display: block; }
-    div.cuadros div.cuadro a.inner:hover span.img {
-      display: none; }
+div.cuadros {
+  width: 100%;
+  overflow: auto;
+  zoom: 1;
+  clear: both; }
+  div.cuadros div.cuadro {
+    float: left;
+    background: transparent url("../img/cuadro_foto.png") no-repeat;
+    width: 168px;
+    height: 168px;
+    margin: 20px 28px 0 0;
+    padding: 24px 16px 8px; }
+    div.cuadros div.cuadro:last-child {
+      margin-right: 0; }
+    div.cuadros div.cuadro a.inner {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      background: #b5b4b0;
+      color: white;
+      width: 100%;
+      height: 100%; }
+      div.cuadros div.cuadro a.inner span.text {
+        display: none;
+        padding: 1.3em; }
+      div.cuadros div.cuadro a.inner:hover span.text {
+        display: block; }
+      div.cuadros div.cuadro a.inner:hover span.img {
+        display: none; }
 
 div.gran-texto {
   color: white;
-  padding: 0.5em;
+  padding: 1.5em;
   text-align: justify;
+  font-size: 1.1em;
   background: #2b6781;
   border-top-left-radius: 10px;
   -moz-border-radius-topleft: 10px;
@@ -255,7 +278,8 @@ div.cuadro-cita {
   color: #ccff99;
   width: 60%;
   background: transparent url("../img/fondo-cita.png");
-  padding: 0.5em; }
+  padding: 0.5em;
+  margin-bottom: 1em; }
   div.cuadro-cita .autor-cita {
     float: right;
     padding: 0.5em;
@@ -291,9 +315,15 @@ div.bloque-contacto {
       line-height: 2em;
       padding: 0.5em;
       width: 100%; }
+    div.bloque-contacto .formulario input[type=text] {
+      margin-bottom: 1em; }
     div.bloque-contacto .formulario input[type=submit] {
       float: right;
-      clear: both; }
+      clear: both;
+      padding: 5px;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px; }
     div.bloque-contacto .formulario textarea {
       height: 10.2em; }
     div.bloque-contacto .formulario input, div.bloque-contacto .formulario textarea {

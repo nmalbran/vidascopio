@@ -55,9 +55,10 @@ $menu_principal_seleccionado: #71B9D8
     -moz-border-radius: $radius
     -webkit-border-radius: $radius
 
-@mixin wrap_float_container()
+@mixin clearfix()
     width: 100%
-    overflow: hidden
+    overflow: auto
+    zoom: 1
 
 
 html, body
@@ -65,11 +66,16 @@ html, body
     padding: 0
     color: $color_texto
     font-family: 'Arial Narrow', sans-serif
+    font-size: 0.9em
+    background: $verde
+
+h2,h3,h4
+    margin: 1.3em auto 1em
 
 h2
     font-family: 'Arial Narrow', sans-serif
     font-weight: normal
-    font-size: 30
+    font-size: 2.2em
 
     &.blanco
         color: white
@@ -77,8 +83,8 @@ h3
     color: white
 
 h4
-    margin-bottom: 0.3em
     color: white
+    font-size: 1.4em
 
 a
     &:link, &:visited
@@ -94,12 +100,12 @@ a
     margin: 0 auto
 
 #header
-    @include wrap_float_container()
+    @include clearfix()
 
 #page
     background: $fondo_contenido_principal
     clear: both
-    padding: 7em 3em 1em
+    padding: 8.6em 3em 1.5em
     @include rounded(top, left)
 
 #footer
@@ -113,22 +119,23 @@ a
         width: 80%
         margin: 0 auto
         text-align: center
+        font-size: 1.2em
 
 
 #logo
     position: absolute
 
 #menu
-    margin-top: 4em
+    margin-top: 68px
     float: right
-    width: 801px
+    width: 800px
     ul
         background: $fondo_menu_principal
         margin: 0
-        padding: 0.5em 0 0 0
+        padding: 5px 0 0 0
         list-style: none
-        //@include wrap_float_container()
-        @include rounded(top, right)
+        @include clearfix()
+        @include rounded(top, right, 10px)
 
         li
             float: left
@@ -137,23 +144,22 @@ a
                 border-right: 0
 
             &:first-child a
-                padding-left: 70px
-
-            &:last-child a
-                padding-right: 2.5em
+                padding-left: 55px
 
             a
                 @include texto_menu_principal()
                 background: $fondo_menu_principal
                 text-decoration: none
                 display: block
-                padding: 0.7em 1.5em
+                padding: 0.7em 25px
+                font-size: 15px
                 &:hover
                     background: $menu_principal_seleccionado
 
             ul
                 margin: 0
                 padding: 0 0
+                width: auto
                 position: absolute
                 visibility: hidden
                 @include rounded(top, right, 0px)
@@ -185,6 +191,7 @@ a
 div.menu-lateral
     width: 20%
     float: left
+    font-size: 1.2em
 
     ul
         list-style: none
@@ -218,14 +225,21 @@ div.texto-columna
     width: 70%
     float: left
     background: $fondo_texto
+    color: white
     @include rounded(top, right)
     padding: 0 5%
-    min-height: 234px
+    min-height: 226px
 
     p
         @include texto_parrafos()
         text-align: justify
         text-indent: 1em
+
+        img
+            margin-left: -1em
+
+        a img
+            margin-left: 0
 
     img
         max-width: 100%
@@ -235,6 +249,7 @@ div.texto-columna
         max-height: 250px
         float: left
         margin-right: 1em
+        margin-bottom: 4em
 
     div.col-izq
         width: 450px
@@ -247,7 +262,7 @@ div.texto-columna
 
 div.que-ofrecemos
     @include rounded(bottom, right)
-    min-height: 234px
+    min-height: 226px
 
     h3
         font-size: 1.5em
@@ -294,6 +309,9 @@ $pad-vb: 8px
 $pad-h: 16px
 
 div.cuadros
+    @include clearfix()
+    clear: both
+
     div.cuadro
         float: left
         background: transparent url("../img/cuadro_foto.png") no-repeat
@@ -326,8 +344,9 @@ div.cuadros
 
 div.gran-texto
     color: white
-    padding: 0.5em
+    padding: 1.5em
     text-align: justify
+    font-size: 1.1em
     background: $fondo_texto
     @include rounded(top, left)
     @include rounded(top, right)
@@ -338,6 +357,7 @@ div.cuadro-cita
     width: 60%
     background: transparent url('../img/fondo-cita.png')
     padding: 0.5em
+    margin-bottom: 1em
 
     .autor-cita
         float: right
@@ -379,15 +399,21 @@ div.bloque-contacto
             padding: 0.5em
             width: 100%
 
+        input[type=text]
+            margin-bottom: 1em
+
         input[type=submit]
             float: right
             clear: both
+            padding: 5px
+            @include all-rounded(5px)
 
         textarea
             height: 10.2em
 
         input, textarea
             border: 1px solid $gris
+
 
         .error
             border: 1px solid red

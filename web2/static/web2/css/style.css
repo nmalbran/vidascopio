@@ -32,7 +32,7 @@ a:hover, a:active {
 
 #header {
   width: 100%;
-  overflow: auto; }
+  overflow: hidden; }
 
 #page {
   background: #ffffed;

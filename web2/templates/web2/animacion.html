@@ -11,6 +11,7 @@
     div.animacion{
         margin: 4em auto;
         width: 820px;
+        text-align: center;
     }
     </style>
 
@@ -24,6 +25,8 @@
           data-setup='{"controls":false, "autoplay": true}'>
          <source src="{{STATIC_URL}}web2/img/vidascopio.flv" type='video/x-flv' />
         </video>
+
+        <a href="{% url 'inicio' %}">Saltar</a>
     </div>
 
     <script type="text/javascript">

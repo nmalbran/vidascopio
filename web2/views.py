@@ -1,12 +1,12 @@
 # Create your views here.
-import os
-from postmark import PMMail
 from django.views.generic import DetailView, TemplateView, View
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 
 from models import Pagina, Menu
 from forms import ContactoForm
+
+from mail import sendEmailSendGrid as sendEmail
 
 class PaginaView(DetailView):
     template_name = 'web2/pagina.html'
@@ -57,14 +57,12 @@ class ContactoView(View):
             %(mensaje)s
             """ % form.cleaned_data
 
-            message = PMMail(api_key = os.environ.get('POSTMARK_API_KEY'),
-                             subject = "Contacto de '%s' desde Vidascopio.cl" % form.cleaned_data['nombre'],
-                             sender = "contacto@vidascopio.cl",
-                             to = "ceciliacarnevali@yahoo.es,isabegv@gmail.com,pamela_atarraff@yahoo.es",
-                             text_body = body,
-                             tag = "contacto-web")
+            subject = "Contacto de '%s' desde Vidascopio.cl" % form.cleaned_data['nombre']
+            sender = "contacto@vidascopio.cl"
+            to = "ceciliacarnevali@yahoo.es,isabegv@gmail.com,pamela_atarraff@yahoo.es"
 
-            enviado = message.send()
+            enviado = sendEmail(subject, sender, to, body)
+
             if enviado:
                 return render_to_response('web2/contacto_fin.html', context_instance=RequestContext(request))
 

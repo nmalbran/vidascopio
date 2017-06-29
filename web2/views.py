@@ -1,4 +1,5 @@
 # Create your views here.
+import os
 from django.views.generic import DetailView, TemplateView, View
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
@@ -59,7 +60,7 @@ class ContactoView(View):
 
             subject = "Contacto de '%s' desde Vidascopio.cl" % form.cleaned_data['nombre']
             sender = "contacto@vidascopio.cl"
-            to = "ceciliacarnevali@yahoo.es,isabegv@gmail.com,pamela_atarraff@yahoo.es"
+            to = os.environ.get('CONTACTO_EMAIL_TO')
 
             enviado = sendEmail(subject, sender, to, body)
 
